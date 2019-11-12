@@ -68,3 +68,12 @@ print(myorder.format(quantity, itemno, price))
 myorder = "I have a {carname}, it is a {model}."
 print(myorder.format(carname = "Ford", model = "Mustang"))
 ```
+
+## Character and ASCII
+
+```python
+# Get ASCII code of character
+ord('A') #65
+# Get character from ASCII code
+chr(97) #'a'
+```
