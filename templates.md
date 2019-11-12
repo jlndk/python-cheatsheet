@@ -1,6 +1,8 @@
-#input readers
-# cases
+# Templates
+## Input readers
 
+```python
+# cases
 cases = int(input())
 for i in range(cases):
     #code
@@ -20,9 +22,11 @@ for line in sys.stdin:
 
 #assign numbers on line to ints
 a, b, c = map(int, input().split(" "))
+```
 
-
-
+## Algorithms
+### BFS - Breadth first search (with lazy construction of graph)
+```python
 #bfs
 def generateOptions(origin):
     result = []
@@ -47,12 +51,13 @@ while current != start:
     current = fromMap[current]
     path.append(current)
 path.reverse() # gives you the final path to finding the shortest way to goal
+```
 
-
-
-#dijkstra
-
+### Dijkstra
+```python
 from collections import defaultdict
+import math
+
 class Graph:
   def __init__(self):
     self.nodes = set()
@@ -67,7 +72,6 @@ class Graph:
     self.edges[to_node].append(from_node)
     self.distances[(from_node, to_node)] = distance
 
-import math
 def dijsktra(graph, initial):
   visited = {initial: 0}
   path = {}
@@ -86,3 +90,4 @@ def dijsktra(graph, initial):
         path[edge] = min_node
 
   return visited, path
+```
