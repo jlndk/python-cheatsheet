@@ -1,10 +1,5 @@
 # Python cheatsheet
 
-## Table of contents
-1. Strings
-2. Lists and dictionaries
-3. Templates
-
 # Strings
 
 ## Transformation
@@ -207,6 +202,12 @@ for acronym, subject, ects in zip(acronyms, subjects, ectses):
     #        Mobile and Distr... 7.5 MODIS
     #        Introduction to ... 7.5 IDD
 ```
+
+
+
+
+
+
 
 # Templates
 ## Input readers
