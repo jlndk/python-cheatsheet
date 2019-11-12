@@ -2,15 +2,18 @@
 ## Input readers
 
 ```python
-# cases
+# read n lines using for loop
 cases = int(input())
 for i in range(cases):
     #code
 
+#read n lines using list comprehension
+n = int(input())
+cases = [input() for x in range(n)]
+
 # while not 0 0
 line = input()
-endString = "0 0"
-while line != endString:
+while line != "0 0":
     #code
     line = input()
 
