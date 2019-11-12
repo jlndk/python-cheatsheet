@@ -53,7 +53,8 @@ current = goal
 while current != start:
     current = fromMap[current]
     path.append(current)
-path.reverse() # gives you the final path to finding the shortest way to goal
+path.reverse()
+# path is now a the sortest list of verticies from start to goal
 ```
 
 ### Dijkstra
