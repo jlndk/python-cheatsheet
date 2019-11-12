@@ -69,3 +69,55 @@ a[-3::-1]           # everything except the last two items, reversed
 ```
 
 ## Iterables
+
+### Enumerate
+```python
+# Enumerate over an iterable with a corresponding index
+enumerate(iterable, [start=0])
+
+# Basic example
+words = ["foo", "bar", "baz"]
+
+for i, word in enumerate(words):
+    print(i, word)  # prints (0, foo)
+                    #        (1, bar)
+                    #        (2, baz)
+
+# Alternativly an offset can be given
+for i, word in enumerate(words, 42):
+    print(i, word)  # prints (42, foo)
+                    #        (43, bar)
+                    #        (44, baz)
+```
+
+### Zip
+
+```python
+# Returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences or iterables.
+zip(*iterables)
+
+# Iterate over two corresponding lists
+students = ["Jacob", "Poppy", "Jonas"]
+coolnesses = [10, 10, 10**8]
+
+for student, coolness in zip(students, coolnesses):
+    print(student, coolness)
+    # prints Jacob 10
+    #        Poppy 10
+    #        Jonas 100000000
+
+# Iterate over three corresponding lists
+
+acronyms = [
+    "Analysis, Design and Software Architecture",
+    "Mobile and Distributed Systems",
+    "Introduction to Database Design"
+]
+subjects = ["BDSA", "MODIS", "IDD"]
+ectses = [15,7.5,7.5]
+for acronym, subject, ects in zip(acronyms, subjects, ectses):
+    print(acronym, subject, ects)
+    # prints Analysis, Design... 15  BDSA
+    #        Mobile and Distr... 7.5 MODIS
+    #        Introduction to ... 7.5 IDD
+```
