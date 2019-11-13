@@ -308,3 +308,50 @@ def dijsktra(graph, initial):
 
     return (visited, path)
 ```
+##Other things
+### Rotating a matrix 90 degrees
+```python
+def rotate_matrix( m ):
+    return [[m[j][i] for j in range(len(m))] for i in range(len(m[0])-1,-1,-1)]
+```
+
+#Useful Libraries
+##String
+```python
+# useful library for getting groups of strings/characters
+import string
+# all uppercase letters
+string.ascii_uppercase # ABCDEFGHIJKLMNOPQRSTUVWXYZ
+# same for lowercase
+string.ascii_lowercase # abcdefghijklmnopqrstuvwxyz
+# or get both in one
+string.ascii_letters # abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+# digits as well
+string.digits # 0123456789
+```
+
+##time
+```python
+# does all things time
+import time
+# get the current time in miliseconds
+time.time()
+```
+
+##itertools
+```python
+# does interesting stuff with iterations
+import itertools
+# count counts (duh)
+itertools.count(10) # 10 11 12 13 14 ...
+# you can also specify step
+itertools.count(2.5, 0.5) # 2.5 3.0 3.5 ...
+# you can cycle a list indefinitely
+itertools.cycle('ABCD') # A B C D A B C D A B C D ...
+# permutations are also a thing
+itertools.permutations(range(3)) # 012 021 102 120 201 210
+# you can also ask it to pick to limit permutaitons
+itertools.permutations('ABCD', 2) # AB AC AD BA BC BD CA CB CD DA DB DC
+# same thing for combinations
+itertools.combinations('ABCD', 2) # AB AC AD BC BD CD
+```
