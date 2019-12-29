@@ -79,6 +79,22 @@ ord('A') #65
 # Get character from ASCII code
 chr(97) #'a'
 ```
+
+## Character groups
+```python
+# useful library for getting groups of strings/characters
+import string
+# all uppercase letters
+string.ascii_uppercase # ABCDEFGHIJKLMNOPQRSTUVWXYZ
+# same for lowercase
+string.ascii_lowercase # abcdefghijklmnopqrstuvwxyz
+# or get both in one
+string.ascii_letters # abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+# digits as well
+string.digits # 0123456789
+```
+
+
 # Lists and Dictionaries
 
 ## Comprehension
@@ -308,29 +324,16 @@ def dijsktra(graph, initial):
 
     return (visited, path)
 ```
-##Other things
+## Miscellaneous
 ### Rotating a matrix 90 degrees
 ```python
 def rotate_matrix( m ):
     return [[m[j][i] for j in range(len(m))] for i in range(len(m[0])-1,-1,-1)]
 ```
 
-#Useful Libraries
-##String
-```python
-# useful library for getting groups of strings/characters
-import string
-# all uppercase letters
-string.ascii_uppercase # ABCDEFGHIJKLMNOPQRSTUVWXYZ
-# same for lowercase
-string.ascii_lowercase # abcdefghijklmnopqrstuvwxyz
-# or get both in one
-string.ascii_letters # abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
-# digits as well
-string.digits # 0123456789
-```
+# Useful Libraries
 
-##time
+## time
 ```python
 # does all things time
 import time
@@ -338,7 +341,7 @@ import time
 time.time()
 ```
 
-##itertools
+## itertools
 ```python
 # does interesting stuff with iterations
 import itertools
